@@ -24,6 +24,15 @@
 {% endif %}
 {% endif %}
 
+{% if theme_bitbucket_user and theme_bitbucket_repo %}
+{% if theme_bitbucket_button|lower == 'true' %}
+<p>
+<iframe src="http://buhman.github.io/bb-btns/bitbucket-btn.html?user={{ theme_bitbucket_user }}&repo={{ theme_bitbucket_repo }}&type={{ theme_bitbucket_type }}&count={{ theme_bitbucket_count }}&size=large"
+  allowtransparency="true" frameborder="0" scrolling="0" width="200" height="35"></iframe>
+</p>
+{% endif %}
+{% endif %}
+
 {% if theme_travis_button|lower != 'false' %}
 {% if theme_travis_button|lower == 'true' %}
     {% set path = theme_github_user + '/' + theme_github_repo %}
